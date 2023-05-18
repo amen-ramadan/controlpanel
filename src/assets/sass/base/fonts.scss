@@ -1,12 +1,12 @@
 @font-face {
     font-family: "Jana LT";
-    src: local("Jana LT"), url('./fonts/janna.woff') format("woff");
+    src: local("Jana LT"), url('/src/assets/fonts/janna.woff') format("woff");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Jana LT";
-    src: local("Jana LT"), url('./fonts/janna-bold.woff') format("woff");
+    src: local("Jana LT"), url('/src/assets/fonts/janna-bold.woff') format("woff");
     font-weight: bold;
 }
 
