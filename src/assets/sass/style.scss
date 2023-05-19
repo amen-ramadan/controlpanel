@@ -9,6 +9,9 @@
 @import "base/typography";
 @import "base/links";
 
+@import "components/components";
+@import "components/demo.scss";
+
 $background-color: silver;
 body {
     background-color: $background-color;
