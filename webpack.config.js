@@ -9,7 +9,8 @@ module.exports = {
 
     entry: {
         'app': './src/index.js',
-        'assets/js/banner': './src/assets/js/banner.js'
+        'assets/js/banner': './src/assets/js/banner.js',
+        'assets/js/tabs': './src/assets/js/tabs.js',
 },
 
     output: {
@@ -90,6 +91,19 @@ module.exports = {
                 ]
         
             },
+            {
+                test: /\.(png|svg|jpe?g|gif)$/,
+                exclude: /fonts/,
+                use: [
+                {
+                    loader: "file-loader",
+                    options: {
+                    name: "[name].[ext]",
+                    outputPath: "assets/images",
+                },
+                },
+                ],
+            },
         
         ]
     },
@@ -118,6 +132,16 @@ module.exports = {
             filename: 'components/card.html',
             template: './src/components/card.html',
             chunks: ['app']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'components/list.html',
+            template: './src/components/list.html',
+            chunks: ['app']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'components/tabs.html',
+            template: './src/components/tabs.html',
+            chunks: ['app', 'assets/js/tabs']
         }),
         new HtmlWebpackPlugin({
             filename: 'components/banner.html',
